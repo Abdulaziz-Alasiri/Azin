@@ -202,7 +202,7 @@ st.markdown("""
         مبيعات متجرك أكثر ذكاءً مع <span class="highlight-green">عِزِين (AZiN)</span>
     </h1>
     <p style="font-size: 1.25rem; color: #94A3B8; max-width: 800px; margin: 0 auto; line-height: 1.6;">
-        عِزِين — حلول ذكية متفرقة، لتجربة تجارية واحدة متكاملة.
+        عِزِين — حلول ذكية متفرقة،،،لتجربة تجارية متكاملة.
     </p>
 </div>
 """, unsafe_allow_html=True)
