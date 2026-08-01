@@ -257,7 +257,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # 📌 رابط مشروع "مساعد العود الملكي"
-chatbot_url = "https://share.streamlit.io/"  # 👈 ضَع رابط موقع عزيز بوت الفعلي هنا
+chatbot_url = "https://chatbot-5zxjmiukqtpo3ymydayza3.streamlit.app/"  # 👈 ضَع رابط موقع عزيز بوت الفعلي هنا
 
 # بطاقة القالب كاملة كـ Hyperlink تفاعلي
 st.markdown(f"""
