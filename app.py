@@ -225,7 +225,7 @@ st.markdown("## ⚡ خدمات المنصة")
 
 st.markdown("""
 <div class="custom-card-long">
-    <h3 style="color: #10B981 !important;">🤖 عزيز بوت (Aziz Bot)</h3>
+    <h3 style="color: #10B981 !important;">🤖 عزين بوت (Azin Bot)</h3>
     <p style="color: #94A3B8; font-size: 1.1rem; line-height: 1.6;">
         مساعد مبيعات ذكي مخصص لمتجرك يقترح المنتجات للعميل بناءً على احتياجه الخاص، ويجيب على الاستفسارات والتفاصيل المعقدة فوراً لرفع معدل التحويل والمبيعات على مدار الساعة.
     </p>
@@ -270,7 +270,7 @@ chatbot_url = "https://chatbot-5zxjmiukqtpo3ymydayza3.streamlit.app/"
 st.markdown(f"""
 <a href="{chatbot_url}" target="_blank" class="clickable-card">
     <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
-        <h3 style="margin: 0; color: #FFFFFF !important;">👑 نموذج تجريبي: عزيز بوت - مساعد العود الملكي (Royal Oud Assistant)</h3>
+        <h3 style="margin: 0; color: #FFFFFF !important;">👑 نموذج تجريبي: Azin Bot - مساعد العود الملكي (Royal Oud Assistant)</h3>
         <span style="background-color: #064E3B; color: #34D399; padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: bold;">
             🔗 اضغط هنا لتجربة النموذج الحية 🟢
         </span>
