@@ -321,13 +321,13 @@ st.markdown("""
 
 st.markdown("""
 <div class="custom-card-long" style="background-color: #0F172A; border-color: #10B981;">
-    <h3 style="color: #10B981 !important;">👨‍💻 عن المؤسس والمطور العام</h3>
+    <h3 style="color: #10B981 !important;">👨‍💻 عن المؤسس والمطور </h3>
     <h4 style="color: #FFFFFF; margin-top: -5px; margin-bottom: 12px;">عبدالعزيز ياسين العسيري | AI Specialist & Developer</h4>
     <p style="color: #CBD5E1; font-size: 1.05rem; line-height: 1.7;">
         خريج **بكالوريوس الذكاء الاصطناعي** من جامعة جدة بمرتبة الشرف الثانية. ممتلك لخبرة عملية في تطوير نماذج تعلّم الآلة (Machine Learning)، أتمتة البيانات، وبناء المنظومات الذكية التفاعلية.
     </p>
     <ul style="color: #94A3B8; font-size: 1rem; line-height: 1.8; margin-right: 20px;">
-        <li><b>الخبرة الصناعية:</b> أخصائي ذكاء اصطناعي سابق في شركة سابك (SABIC)، عملت على تطوير نماذج التنبؤ وتحليل البيانات لدعم اتخاذ القرار.</li>
+        <li><b>الخبرة الصناعية:</b> أخصائي ذكاء اصطناعي (تمهير) في شركة سابك (SABIC)، عملت على تطوير نماذج التنبؤ وتحليل البيانات لدعم اتخاذ القرار.</li>
         <li><b>أبرز المشاريع التقنية:</b> تطوير محرك **شات بوت تفاعلي ذكي** للمتاجر والعملاء مع ربطه بقواعد بيانات متقدمة (SQLite3 & Streamlit)، تصميم أنظمة كشف الشذوذ (Anomaly Detection)، وتطوير روبوتات أمنية وتفاعلية مستندة للرؤية الحاسوبية.</li>
         <li><b>المهارات والتقنيات:</b> Python, SQL, Streamlit, SQLite3, TensorFlow, OpenCV, RapidMiner, and Machine Learning.</li>
     </ul>
