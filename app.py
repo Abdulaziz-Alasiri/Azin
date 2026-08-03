@@ -1,6 +1,7 @@
 import streamlit as st
 import smtplib
 import sqlite3
+import re
 from datetime import datetime
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
@@ -18,19 +19,22 @@ st.set_page_config(
 # 2. تهيئة قاعدة البيانات المحلية للنسخ الاحتياطي (SQLite3)
 # ---------------------------------------------------------
 def init_db():
-    conn = sqlite3.connect("orders.db")
-    cursor = conn.cursor()
-    cursor.execute("""
-        CREATE TABLE IF NOT EXISTS orders (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            name TEXT NOT NULL,
-            phone TEXT NOT NULL,
-            service_type TEXT,
-            created_at TEXT
-        )
-    """)
-    conn.commit()
-    conn.close()
+    try:
+        conn = sqlite3.connect("orders.db")
+        cursor = conn.cursor()
+        cursor.execute("""
+            CREATE TABLE IF NOT EXISTS orders (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                name TEXT NOT NULL,
+                phone TEXT NOT NULL,
+                service_type TEXT,
+                created_at TEXT
+            )
+        """)
+        conn.commit()
+        conn.close()
+    except Exception as e:
+        print("خطأ في إنشاء قاعدة البيانات:", e)
 
 
 def save_order_to_db(name, phone, service_type):
@@ -58,9 +62,14 @@ init_db()
 # ---------------------------------------------------------
 def send_direct_email(name, phone, service_type):
     sender_email = "azoz24zezoo@gmail.com"
-    # ضع هنا كلمة مرور التطبيق (16 حرفاً)
-    sender_password =st.secrets["GMAIL_APP_PASSWORD"]
     receiver_email = "azoz24zezoo@gmail.com"
+
+    # جلب كلمة المرور بأمان دون إيقاف التطبيق في حال عدم وجودها
+    sender_password = st.secrets.get("GMAIL_APP_PASSWORD", "")
+
+    if not sender_password:
+        print("خطأ: لم يتم ضبط GMAIL_APP_PASSWORD في secrets.toml")
+        return False
 
     subject = f"🚀 طلب خدمة جديد في AZiN من: {name}"
     body = f"""
@@ -68,7 +77,7 @@ def send_direct_email(name, phone, service_type):
     -----------------------------------
     👤 اسم العميل: {name}
     📱 رقم الجوال: {phone}
-    🛠️ نوع الخدمة المطلوبة: {service_type}
+    🛠️ نوع الخدمة المطلوبة: {service_type if service_type else 'غير محدد'}
     ⏰ التاريخ والوقت: {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}
     -----------------------------------
     """
@@ -202,7 +211,7 @@ st.markdown("""
         مبيعات متجرك أكثر ذكاءً مع <span class="highlight-green">عِزِين (AZiN)</span>
     </h1>
     <p style="font-size: 1.25rem; color: #94A3B8; max-width: 800px; margin: 0 auto; line-height: 1.6;">
-        عِزِين — حلول ذكية متفرقة،،،لتجربة تجارية متكاملة.
+        عِزِين — حلول ذكية متفرقة، لتجربة تجارية متكاملة.
     </p>
 </div>
 """, unsafe_allow_html=True)
@@ -244,7 +253,6 @@ st.markdown("---")
 # ---------------------------------------------------------
 st.markdown("## 🧪 النماذج والمشاريع التجريبية المتاحة الان")
 
-# النص عادي، من اليمين لليسار وبدون خلفيات
 st.markdown("""
 <div style="direction: rtl; text-align: right; margin-bottom: 25px;">
     <p style="color: #F8FAFC; font-size: 1.15rem; line-height: 1.7; margin-bottom: 8px;">
@@ -257,9 +265,8 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # 📌 رابط مشروع "مساعد العود الملكي"
-chatbot_url = "https://chatbot-5zxjmiukqtpo3ymydayza3.streamlit.app/"  # 👈 ضَع رابط موقع عزيز بوت الفعلي هنا
+chatbot_url = "https://chatbot-5zxjmiukqtpo3ymydayza3.streamlit.app/"
 
-# بطاقة القالب كاملة كـ Hyperlink تفاعلي
 st.markdown(f"""
 <a href="{chatbot_url}" target="_blank" class="clickable-card">
     <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
@@ -293,13 +300,15 @@ with st.form("contact_form", clear_on_submit=True):
 
     submit = st.form_submit_button("إرسال الطلب 🟢")
     if submit:
-        if name and phone:
-            save_order_to_db(name, phone, service_type)
-            sent = send_direct_email(name, phone, service_type)
+        # التثبت من إدخال الاسم ورقم الهاتف بطريقة صحيحة
+        clean_phone = re.sub(r'\s+', '', phone)
+        if name.strip() and clean_phone:
+            save_order_to_db(name.strip(), clean_phone, service_type.strip())
+            sent = send_direct_email(name.strip(), clean_phone, service_type.strip())
             if sent:
-                st.success(f"تم استلام طلبك بنجاح أستاذ {name}! سيتواصل معك فريق **AZiN** في أقرب وقت.")
+                st.success(f"تم استلام طلبك بنجاح أستاذ {name.strip()}! سيتواصل معك فريق **AZiN** في أقرب وقت.")
             else:
-                st.warning(f"تم حفظ طلبك بنجاح أستاذ {name}! وسيتواصل معك فريق **AZiN** قريباً.")
+                st.warning(f"تم حفظ طلبك بنجاح أستاذ {name.strip()}! وسيتواصل معك فريق **AZiN** قريباً.")
         else:
             st.warning("يرجى كتابة الاسم ورقم التواصل لتمكين فريقنا من التواصل معك.")
 
