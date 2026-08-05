@@ -272,7 +272,7 @@ st.markdown(f"""
     <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
         <h3 style="margin: 0; color: #FFFFFF !important;">👑 نموذج تجريبي: Azin Bot - مساعد العود الملكي (Royal Oud Assistant)</h3>
         <span style="background-color: #064E3B; color: #34D399; padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: bold;">
-            🔗 اضغط هنا لتجربة النموذج الحية 🟢
+            🔗 اضغط هنا لتجربة النموذج الأن 🟢
         </span>
     </div>
     <p style="color: #94A3B8; font-size: 1.05rem; line-height: 1.6; margin-top: 14px; margin-bottom: 5px;">
