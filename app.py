@@ -224,29 +224,48 @@ st.markdown("---")
 st.markdown("## ⚡ خدمات المنصة")
 
 st.markdown("""
+<!-- الخدمة الأولى: عزين بوت (متاح الآن) -->
 <div class="custom-card-long">
-    <h3 style="color: #10B981 !important;">🤖 عزين بوت (Azin Bot)</h3>
-    <p style="color: #94A3B8; font-size: 1.1rem; line-height: 1.6;">
-        مساعد مبيعات ذكي مخصص لمتجرك يقترح المنتجات للعميل بناءً على احتياجه الخاص، ويجيب على الاستفسارات والتفاصيل المعقدة فوراً لرفع معدل التحويل والمبيعات على مدار الساعة.
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 8px;">
+        <h3 style="color: #10B981 !important; margin: 0;">🤖 عِزِين بوت | AZIN Bot</h3>
+        <span style="background-color: #064E3B; color: #34D399; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: bold;">
+            🟢 متاح الآن
+        </span>
+    </div>
+    <h4 style="color: #6EE7B7; margin-top: 0; margin-bottom: 12px; font-weight: 500;">مساعد الذكاء الاصطناعي لخدمة العملاء والمبيعات</h4>
+    <p style="color: #94A3B8; font-size: 1.05rem; line-height: 1.6; margin: 0;">
+        مساعد ذكي يعمل على مدار الساعة للإجابة عن استفسارات العملاء، واقتراح المنتجات، وتحسين تجربة التسوق، وزيادة فرص البيع عبر المواقع والمتاجر الإلكترونية.
     </p>
 </div>
 
-<div class="custom-card-long">
-    <h3>🔗 التناغم والربط مع المنصات (Seamless Integration)</h3>
-    <p style="color: #94A3B8; font-size: 1.1rem; line-height: 1.6;">
-        ربط مباشر ومستقر مع المنصات الرئيسية للتجارة الإلكترونية (سلة، زد، وشوبيفاي) لمزامنة المخزون، المنتجات، والطلبات تلقائياً وبأعلى سرعة ودقة.
+<!-- الخدمة الثانية: عزين ستوديو (قيد التطوير) -->
+<div class="custom-card-long" style="opacity: 0.9;">
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 8px;">
+        <h3 style="color: #FFFFFF !important; margin: 0;">🎨 عِزِين ستوديو | AZIN Studio</h3>
+        <span style="background-color: #312E81; color: #818CF8; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: bold;">
+            ⏳ قريباً / قيد التطوير
+        </span>
+    </div>
+    <h4 style="color: #A5B4FC; margin-top: 0; margin-bottom: 12px; font-weight: 500;">استوديو الذكاء الاصطناعي للتسويق وصناعة الحملات الإعلانية</h4>
+    <p style="color: #94A3B8; font-size: 1.05rem; line-height: 1.6; margin: 0;">
+        منصة ذكاء اصطناعي متكاملة تساعد الشركات على إنشاء حملات تسويقية احترافية خلال دقائق، بدءًا من تحليل المنتج والجمهور المستهدف، وصولًا إلى إنتاج النصوص الإعلانية، والتصاميم، والتعليق الصوتي، وحقيبة إعلانية جاهزة للنشر.
     </p>
 </div>
 
-<div class="custom-card-long">
-    <h3>📊 الأتمتة وتحليلات السلوك (Smart Analytics)</h3>
-    <p style="color: #94A3B8; font-size: 1.1rem; line-height: 1.6;">
-        تحليل دقيق لأسئلة العملاء وتفاعلاتهم مع البوت للتعرف على أكثر المنتجات طلباً وأبرز مخاوف الشراء، مما يعطيك تقارير ذكية لتطوير حملاتك التسويقية وزيادة الأرباح.
+<!-- الخدمة الثالثة: عزين إنسايتس (قيد التطوير) -->
+<div class="custom-card-long" style="opacity: 0.9;">
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 8px;">
+        <h3 style="color: #FFFFFF !important; margin: 0;">📊 عِزِين إنسايتس | AZIN Insights</h3>
+        <span style="background-color: #312E81; color: #818CF8; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: bold;">
+            ⏳ قريباً / قيد التطوير
+        </span>
+    </div>
+    <h4 style="color: #A5B4FC; margin-top: 0; margin-bottom: 12px; font-weight: 500;">منصة ذكاء الأعمال والتحليلات الذكية</h4>
+    <p style="color: #94A3B8; font-size: 1.05rem; line-height: 1.6; margin: 0;">
+        منصة تعتمد على الذكاء الاصطناعي لتحليل بيانات الأعمال، واكتشاف الأنماط، والتنبؤ بالاتجاهات، وتقديم توصيات ذكية تساعد الشركات على اتخاذ قرارات مبنية على البيانات وتحقيق نمو مستدام.
     </p>
 </div>
 """, unsafe_allow_html=True)
-
-st.markdown("---")
 
 # ---------------------------------------------------------
 # 7. قسم النماذج والمشاريع التجريبية المتاحة الان
