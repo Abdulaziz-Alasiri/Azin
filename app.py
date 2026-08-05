@@ -238,29 +238,29 @@ st.markdown("""
     </p>
 </div>
 
-<!-- الخدمة الثانية: عزين ستوديو (قيد التطوير) -->
-<div class="custom-card-long" style="opacity: 0.9;">
+<!-- الخدمة الثانية: عزين ستوديو (قيد البناء والتطوير) -->
+<div class="custom-card-long" style="opacity: 0.95;">
     <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 8px;">
         <h3 style="color: #FFFFFF !important; margin: 0;">🎨 عِزِين ستوديو | AZIN Studio</h3>
-        <span style="background-color: #312E81; color: #818CF8; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: bold;">
-            ⏳ قريباً / قيد التطوير
+        <span style="background-color: #1E293B; color: #38BDF8; border: 1px solid #0284C7; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: bold;">
+            🛠️ قيد البناء والتطوير
         </span>
     </div>
-    <h4 style="color: #A5B4FC; margin-top: 0; margin-bottom: 12px; font-weight: 500;">استوديو الذكاء الاصطناعي للتسويق وصناعة الحملات الإعلانية</h4>
+    <h4 style="color: #7DD3FC; margin-top: 0; margin-bottom: 12px; font-weight: 500;">استوديو الذكاء الاصطناعي للتسويق وصناعة الحملات الإعلانية</h4>
     <p style="color: #94A3B8; font-size: 1.05rem; line-height: 1.6; margin: 0;">
         منصة ذكاء اصطناعي متكاملة تساعد الشركات على إنشاء حملات تسويقية احترافية خلال دقائق، بدءًا من تحليل المنتج والجمهور المستهدف، وصولًا إلى إنتاج النصوص الإعلانية، والتصاميم، والتعليق الصوتي، وحقيبة إعلانية جاهزة للنشر.
     </p>
 </div>
 
-<!-- الخدمة الثالثة: عزين إنسايتس (قيد التطوير) -->
-<div class="custom-card-long" style="opacity: 0.9;">
+<!-- الخدمة الثالثة: عزين إنسايتس (المرحلة القادمة) -->
+<div class="custom-card-long" style="opacity: 0.85;">
     <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 8px;">
         <h3 style="color: #FFFFFF !important; margin: 0;">📊 عِزِين إنسايتس | AZIN Insights</h3>
-        <span style="background-color: #312E81; color: #818CF8; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: bold;">
-            ⏳ قريباً / قيد التطوير
+        <span style="background-color: #2E1065; color: #C084FC; border: 1px solid #7E22CE; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: bold;">
+            🎯 المرحلة القادمة
         </span>
     </div>
-    <h4 style="color: #A5B4FC; margin-top: 0; margin-bottom: 12px; font-weight: 500;">منصة ذكاء الأعمال والتحليلات الذكية</h4>
+    <h4 style="color: #D8B4FE; margin-top: 0; margin-bottom: 12px; font-weight: 500;">منصة ذكاء الأعمال والتحليلات الذكية</h4>
     <p style="color: #94A3B8; font-size: 1.05rem; line-height: 1.6; margin: 0;">
         منصة تعتمد على الذكاء الاصطناعي لتحليل بيانات الأعمال، واكتشاف الأنماط، والتنبؤ بالاتجاهات، وتقديم توصيات ذكية تساعد الشركات على اتخاذ قرارات مبنية على البيانات وتحقيق نمو مستدام.
     </p>
